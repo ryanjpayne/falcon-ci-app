@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment {
-        gitCredentials = "cc-creds-iam"
-        gitRepoUrl = "https://git-codecommit.us-west-2.amazonaws.com/v1/repos/enzy6qrg-repo"
+        gitCredentials = "<CodeCommit Credentials ID>"
+        gitRepoUrl = "<CodeCommit Repo HTTPS Clone URL>"
         //
-        myImageName = "hello-world"
+        myImageName = "<image-name>"
         myImageTag = "latest"
         enforce = "never-fail"
         scanTimeout = 120 

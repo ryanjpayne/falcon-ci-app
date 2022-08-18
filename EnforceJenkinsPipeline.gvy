@@ -1,16 +1,16 @@
 pipeline {
     agent any
     environment {
-        gitCredentials = "cc-creds-iam"
-        gitRepoUrl = "https://git-codecommit.us-west-2.amazonaws.com/v1/repos/enzy6qrg-repo"
+        gitCredentials = "<CodeCommit Credentials ID>"
+        gitRepoUrl = "<CodeCommit Repo HTTPS Clone URL>"
         //
         myImageName = "hello-world"
         myImageTag = "latest"
         enforce = "fail" // to allow, enforce = "never-fail"
         scanTimeout = 120 
         //
-        region = "us-west-2"
-        ecrRepo = "708248541114.dkr.ecr.us-west-2.amazonaws.com/hello-world"
+        region = "<Your AWS Region>"
+        ecrRepo = "<ECR Repository>"
     }
    
     stages {
