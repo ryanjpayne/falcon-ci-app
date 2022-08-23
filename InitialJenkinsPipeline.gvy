@@ -4,9 +4,9 @@ pipeline {
         gitCredentials = "<CodeCommit Credentials ID>"
         gitRepoUrl = "<CodeCommit Repo HTTPS Clone URL>"
         //
-        myImageName = "<image-name>"
+        myImageName = "falconcilab"
         myImageTag = "latest"
-        enforce = "never-fail"
+        enforcePolicy = "false"
         scanTimeout = 120 
     }
    
@@ -29,7 +29,7 @@ pipeline {
         // Scan Image with Falcon CI
         stage('Scanning Image with Falcon CI Security') {
             steps{
-                falconCISecurity imageName: myImageName, imageTag: myImageTag, onNonCompliance: enforce, timeout: scanTimeout
+                falconCISecurity imageName: myImageName, imageTag: myImageTag, enforce: enforcePolicy, timeout: scanTimeout
             }
         }
     }

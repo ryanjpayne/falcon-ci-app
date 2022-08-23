@@ -4,9 +4,9 @@ pipeline {
         gitCredentials = "<CodeCommit Credentials ID>"
         gitRepoUrl = "<CodeCommit Repo HTTPS Clone URL>"
         //
-        myImageName = "hello-world"
+        myImageName = "falconcilab"
         myImageTag = "latest"
-        enforce = "fail" // to allow, enforce = "never-fail"
+        enforcePolicy = "true"
         scanTimeout = 120 
         //
         region = "<Your AWS Region>"
@@ -32,7 +32,7 @@ pipeline {
         // Scan Image with Falcon CI
         stage('Scanning Image with Falcon CI Security') {
             steps{
-                falconCISecurity imageName: myImageName, imageTag: myImageTag, onNonCompliance: enforce, timeout: scanTimeout
+                falconCISecurity imageName: myImageName, imageTag: myImageTag, enforce: enforcePolicy, timeout: scanTimeout
             }
         }
         // Uploading Docker images into AWS ECR
