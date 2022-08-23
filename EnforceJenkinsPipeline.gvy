@@ -1,16 +1,15 @@
 pipeline {
     agent any
     environment {
-        gitCredentials = "<CodeCommit Credentials ID>"
+        region = "<Your AWS Region>"
+        ecrRepo = "<ECR Repository>"
         gitRepoUrl = "<CodeCommit Repo HTTPS Clone URL>"
         //
+        gitCredentials = "codecommit"
         myImageName = "falconcilab"
         myImageTag = "latest"
         enforcePolicy = "true"
-        scanTimeout = 120 
-        //
-        region = "<Your AWS Region>"
-        ecrRepo = "<ECR Repository>"
+        scanTimeout = 120        
     }
    
     stages {

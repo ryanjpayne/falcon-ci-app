@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        gitCredentials = "<CodeCommit Credentials ID>"
         gitRepoUrl = "<CodeCommit Repo HTTPS Clone URL>"
         //
+        gitCredentials = "codecommit"
         myImageName = "falconcilab"
         myImageTag = "latest"
         enforcePolicy = "false"
