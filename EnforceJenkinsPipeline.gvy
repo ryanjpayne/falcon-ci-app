@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    environment {
-        region = "<Your AWS Region>"
+    environment {        
         ecrRepo = "<ECR Repository>"
         gitRepoUrl = "<CodeCommit Repo HTTPS Clone URL>"
         //
+        region = "us-west-2"
         gitCredentials = "codecommit"
         myImageName = "falconcilab"
         myImageTag = "latest"
