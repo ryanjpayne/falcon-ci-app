@@ -29,7 +29,7 @@ pipeline {
         // Scan Image with Falcon CI
         stage('Scanning Image with Falcon CI Security') {
             steps{
-                falconCISecurity imageName: myImageName, imageTag: myImageTag, enforce: enforcePolicy, timeout: scanTimeout
+                crowdStrikeSecurity imageName: myImageName, imageTag: myImageTag, enforce: enforcePolicy, timeout: scanTimeout
             }
         }
     }
