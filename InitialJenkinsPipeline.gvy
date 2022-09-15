@@ -5,7 +5,7 @@ pipeline {
         //
         gitCredentials = "codecommit"
         myImageName = "falconcilab"
-        myImageTag = "latest"
+        myImageTag = "1.0"
         enforcePolicy = "false"
         scanTimeout = 120
     }
