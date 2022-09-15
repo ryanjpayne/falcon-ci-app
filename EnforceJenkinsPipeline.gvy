@@ -7,7 +7,7 @@ pipeline {
         region = "us-west-2"
         gitCredentials = "codecommit"
         myImageName = "falconcilab"
-        myImageTag = "latest"
+        myImageTag = "1.1"
         enforcePolicy = "true"
         scanTimeout = 120
     }
